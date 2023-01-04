@@ -13,6 +13,8 @@ const query = groq`
   } | order(_createAt desc)
 `;
 
+export const revalidate = 30;
+
 async function HomePage() {
   if (previewData()) {
     return (
