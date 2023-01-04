@@ -1,5 +1,3 @@
-import { Image, Slug, TitledListValue } from "sanity";
-
 type Base = {
   _createAt: string;
   _id: string;

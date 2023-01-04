@@ -3,7 +3,7 @@ import { buildLegacyTheme } from "sanity";
 const props = {
   "--choosen-white": "#fff",
   "--choosen-black": "#1a1a1a",
-  "--chosen-ivory": "#fffff0",
+  "--choosen-ivory": "#fffff0",
   "--choosen-red": "#db4437",
   "--choosen-yellow": "#f4b400",
   "--choosen-green": "#0f9d58",
@@ -17,7 +17,7 @@ export const Theme = buildLegacyTheme({
   "--gray": "#666",
   "--gray-base": "#666",
 
-  "--component-bg": props["--chosen-ivory"],
+  "--component-bg": props["--choosen-ivory"],
   "--component-text-color": "#444444",
 
   // BRAND

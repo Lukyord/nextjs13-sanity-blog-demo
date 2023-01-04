@@ -5,6 +5,7 @@ import { schemaTypes } from "./schemas";
 import { Theme } from "./theme";
 import StudioNavbarCustomize from "./components/SanityDesign/StudioNavbarCustomize";
 import Logo from "./components/SanityDesign/Logo";
+import { getDefaultDocumentNode } from "./structure";
 
 const projectId: string = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset: string = process.env.NEXT_PUBLIC_SANITY_DATASET!;
@@ -15,7 +16,12 @@ export default defineConfig({
   title: "Nextjs13 Sanity Blog",
   projectId,
   dataset,
-  plugins: [deskTool(), visionTool()],
+  plugins: [
+    deskTool({
+      defaultDocumentNode: getDefaultDocumentNode,
+    }),
+    visionTool(),
+  ],
   schema: {
     types: schemaTypes,
   },
